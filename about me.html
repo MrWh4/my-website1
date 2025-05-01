@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mening Portfoliom</title>
+    <link rel="stylesheet" href="about me.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.7.1/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+</head>
+<body>
+    <div class="loader">
+        <div class="progress-bar"></div>
+        <div class="progress-text">0%</div>
+    </div>
+
+    <div class="container">
+        <!-- 3D fon -->
+        <canvas id="bg"></canvas>
+
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="logo">
+                <span class="highlight">Mening</span> Portfoliom
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Bosh sahifa</a></li>
+                <li><a href="#about">Men haqimda</a></li>
+                <li><a href="#skills">Ko'nikmalar</a></li>
+                <li><a href="#projects">Loyihalar</a></li>
+                <li><a href="#contact">Aloqa</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+
+        <!-- Asosiy qism -->
+        <section id="home" class="section">
+            <div class="content">
+                <h1 class="title">Salom, men <span class="highlight">Ismingiz</span></h1>
+                <div class="typed-container">
+                    <span id="typed"></span>
+                </div>
+                <p class="description">
+                    Men <span class="highlight">web dasturlash</span> sohasida faoliyat yuritaman va 
+                    zamonaviy texnologiyalar bilan ishlashni yaxshi ko'raman.
+                </p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn primary">Loyihalarim</a>
+                    <a href="#contact" class="btn secondary">Bog'lanish</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Men haqimda -->
+        <section id="about" class="section">
+            <div class="content">
+                <h2 class="section-title">Men haqimda</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>
+                            Men <span class="highlight">web dasturlash</span> sohasida <span class="highlight">X yil</span> 
+                            tajribaga egaman. Zamonaviy texnologiyalar va yangi yechimlar yaratishga qiziqaman.
+                        </p>
+                        <p>
+                            Mening maqsadim foydalanuvchilar uchun qulay va chiroyli interfeysga ega 
+                            web-ilovalarni yaratish. Har bir loyiha ustida ishlashda kreativ yondashuvni afzal ko'raman.
+                        </p>
+                        <p>
+                            Dasturlashdan tashqari, men <span class="highlight">kitob o'qish, sayohat qilish va sport</span> 
+                            bilan shug'ullanishni yaxshi ko'raman.
+                        </p>
+                    </div>
+                    <div class="about-image">
+                        <div class="image-container">
+                            <!-- Bu yerga o'z rasmingizni qo'ying -->
+                            <div class="placeholder-image">Rasm</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ko'nikmalar -->
+        <section id="skills" class="section">
+            <div class="content">
+                <h2 class="section-title">Ko'nikmalarim</h2>
+                <div class="skills-container">
+                    <div class="skill-category">
+                        <h3>Frontend</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item" data-skill="HTML">
+                                <div class="skill-icon">HTML</div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 95%"></div>
+                                </div>
+                                <span class="skill-percentage">95%</span>
+                            </div>
+                            <div class="skill-item" data-skill="CSS">
+                                <div class="skill-icon">CSS</div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 90%"></div>
+                                </div>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="skill-item" data-skill="JavaScript">
+                                <div class="skill-icon">JS</div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%"></div>
+                                </div>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-item" data-skill="React">
+                                <div class="skill-icon">React</div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 80%"></div>
+                                </div>
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3>Backend</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item" data-skill="Node.js">
+                                <div class="skill-icon">Node</div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 75%"></div>
+                                </div>
+                                <span class="skill-percentage">75%</span>
+                            </div>
+                            <div class="skill-item" data-skill="Express">
+                                <div class="skill-icon">Express</div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 70%"></div>
+                                </div>
+                                <span class="skill-percentage">70%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3>Boshqalar</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item" data-skill="Git">
+                                <div class="skill-icon">Git</div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%"></div>
+                                </div>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-item" data-skill="Figma">
+                                <div class="skill-icon">Figma</div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 70%"></div>
+                                </div>
+                                <span class="skill-percentage">70%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Loyihalar -->
+        <section id="projects" class="section">
+            <div class="content">
+                <h2 class="section-title">Mening loyihalarim</h2>
+                <div class="projects-grid">
+                    <!-- Loyiha 1 -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="placeholder-image">Loyiha 1</div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">E-commerce sayt</h3>
+                            <p class="project-description">
+                                To'liq funksional onlayn do'kon. React, Node.js va MongoDB texnologiyalari asosida.
+                            </p>
+                            <div class="project-tech">
+                                <span>React</span>
+                                <span>Node.js</span>
+                                <span>MongoDB</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn small">Ko'rish</a>
+                                <a href="#" class="btn small secondary">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Loyiha 2 -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="placeholder-image">Loyiha 2</div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Portfolio sayt</h3>
+                            <p class="project-description">
+                                Zamonaviy dizayn va animatsiyalarga ega portfolio sayt. HTML, CSS va JavaScript yordamida.
+                            </p>
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn small">Ko'rish</a>
+                                <a href="#" class="btn small secondary">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Loyiha 3 -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="placeholder-image">Loyiha 3</div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Mobil ilova</h3>
+                            <p class="project-description">
+                                React Native yordamida yaratilgan mobil ilova. iOS va Android platformalari uchun.
+                            </p>
+                            <div class="project-tech">
+                                <span>React Native</span>
+                                <span>Firebase</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn small">Ko'rish</a>
+                                <a href="#" class="btn small secondary">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Aloqa -->
+        <section id="contact" class="section">
+            <div class="content">
+                <h2 class="section-title">Bog'lanish</h2>
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <p>
+                            Agar hamkorlik qilishni istasangiz yoki savollaringiz bo'lsa, 
+                            men bilan bog'lanishingiz mumkin.
+                        </p>
+                        <div class="contact-item">
+                            <span class="contact-icon">📧</span>
+                            <a href="mailto:your.email@example.com">your.email@example.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📱</span>
+                            <a href="tel:+998901234567">+998 90 123 45 67</a>
+                        </div>
+                        <div class="social-links">
+                            <a href="#" class="social-link">GitHub</a>
+                            <a href="#" class="social-link">LinkedIn</a>
+                            <a href="#" class="social-link">Telegram</a>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Ismingiz</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Xabar</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn primary">Yuborish</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2023 Ismingiz. Barcha huquqlar himoyalangan.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="about me.js"></script>
+</body>
+</html>
